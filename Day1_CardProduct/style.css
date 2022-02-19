@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(5, 37, 35, 0.6758053563222164) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.card_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.card{
+  width: 300px;
+  height: 400px;
+  background-color: #242736;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.card_top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_heart,
+.card_cart {
+  color: white;
+  font-size: 18px;
+}
+.card_image {
+  text-align: center;
+  margin-top: -100px;
+}
+.card_image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card_product_name {
+  color: #598e62;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card_product_price {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.card_product_size {
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+}
+
+.product_size {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin: 0 5px;
+}
+.card_product_color {
+  display: flex;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.color {
+  width: 20px;
+  height: 20px;
+  border-radius: 100rem;
+  margin: 0 5px;
+}
+.red_color {
+  background-color: red;
+}
+.white_color {
+  background-color: white;
+}
+.blue_color {
+  background-color: blue;
+}
+
+button {
+  padding: 7px 13px;
+  border-radius: 5px;
+  border: none;
+  background-color: #44a64b;
+  color: white;
+  font-weight: 700;
+}
+.card_onhover{
+  transform: translateY(150px);
+  opacity: 0;
+  animation-name: move;
+  animation-duration: 3s;
+}
+.card:hover .card_image {
+  transform:translate(-20px, -40px) rotate(-25deg);
+}
+
+.card:hover .card_product_name,
+.card:hover .card_product_price {
+  text-align: start;
+  transform: translateY(-40px);
+}
+
+.card:hover .card_onhover{
+
+  transform: translateY(-30px);
+  opacity: 100;
+}
+
+.card_image, .card_product_name, .card_product_price, .card_onhover{
+  transition: 0.5s;
+}
