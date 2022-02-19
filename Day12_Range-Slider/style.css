@@ -1,0 +1,35 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  font-family: "Poppins";
+  text-align: center;
+}
+
+h1.title {
+  margin: 100px;
+}
+
+.range_slider {
+  margin: 0 auto;
+  width: 600px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.slider{
+  width: 40%;
+  height: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

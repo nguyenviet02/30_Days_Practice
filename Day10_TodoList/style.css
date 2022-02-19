@@ -1,0 +1,72 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins";
+  background: linear-gradient(to right, #ffe000, #799f0c);
+}
+
+.container{
+  width: 400px;
+  margin-top: 100px;
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+form{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #999;
+  padding: 10px 20px;
+  overflow: hidden;
+}
+
+form input{
+  font-size: 25px;
+  width: 80%;
+  border: none;
+  outline: none;
+}
+
+form button{
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: yellowgreen;
+  color: white;
+}
+
+ul li{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-top: 1px solid #999;
+}
+
+ul li i{
+  color: #999;
+  opacity: 0;
+}
+
+ul li:hover i{
+  opacity: 1;
+}
+
+ul li.completed span{
+  text-decoration: line-through;
+  color: #999;
+}

@@ -1,0 +1,65 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallary_show{
+  min-width: 60%;
+}
+.main_show{
+  width: 100%;
+  height: 500px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.fas{
+  color: #fff;
+  font-size: 50px;
+  position: absolute;
+}
+.fa-caret-left{
+  left: 20px;
+}
+.fa-caret-right{
+  
+  right: 20px;
+}
+
+.gallary_list{
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  place-items: center;
+}
+
+.gallary_item{
+  width: 100px;
+  height: 100px;
+}
+
+.gallary_item.choose{
+  border: 5px solid brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

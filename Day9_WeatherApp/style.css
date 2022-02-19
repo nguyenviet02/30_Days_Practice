@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+    url(./images/cool.jpg) no-repeat center/cover;
+  transition: 0.5s;
+}
+
+body.hot {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+    url(./images/hot.jpg) no-repeat center/cover;
+}
+body.warm {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+    url(./images/warm.jpg) no-repeat center/cover;
+}
+body.cool {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+    url(./images/cool.jpg) no-repeat center/cover;
+}
+body.cold {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+    url(./images/cold.jpg) no-repeat center/cover;
+}
+
+.weather_box {
+  min-width: 350px;
+  padding: 20px 15px;
+  background-image: url(./images/cool.jpg);
+  background: no-repeat center/cover;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  transition: 0.3s;
+}
+
+body.hot .weather_box {
+  background-image: url(./images/hot.jpg);
+}
+body.warm .weather_box {
+  background-image: url(./images/warm.jpg);
+}
+body.cool .weather_box {
+  background-image: url(./images/cool.jpg);
+}
+body.cold .weather_box {
+  background-image: url(./images/cold.jpg);
+}
+
+.search input {
+  padding: 10px 20px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0px 15px 0px 15px;
+  font-size: 18px;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
+
+.search input:focus {
+  border-radius: 15px 0px 15px 0px;
+  opacity: 1;
+}
+
+.country_info {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+.time_box {
+  text-align: center;
+}
+
+.main_content {
+  text-align: center;
+}
+
+.temperature {
+  width: 70%;
+  margin: 20px auto;
+  padding: 15px 5px;
+  font-size: 60px;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+.weather_description {
+  font-size: 35px;
+  font-weight: 600;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+  margin: 20px 0px 40px 0px;
+}
+
+.weather_detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 20px 40px 20px;
+}
