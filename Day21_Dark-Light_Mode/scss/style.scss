@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --background-color: #fff;
+  --secondary-background-color: #dadada;
+  --primary-color: #0a6cf1;
+  --primary-text-color: #000;
+  --secondary-text-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins";
+  background-color: var(--background-color);
+}
+
+body.dark {
+  --background-color: #2d2c2d;
+  --secondary-background-color: #3b3a3b;
+  --primary-color: #4daf54;
+  --primary-text-color: #fff;
+  --secondary-text-color: #fff;
+}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+
+  &__logo {
+    font-size: 28px;
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  #switch {
+    display: none;
+  }
+
+  label {
+    width: 80px;
+    height: 30px;
+    background-color: var(--secondary-background-color);
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    display: block;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0%;
+      left: 0px;
+      width: 30px;
+      height: 30px;
+      background-color: var(--primary-color);
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+  }
+  input:checked + label:after {
+    left: 50px;
+  }
+}
+
+.main_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 200px;
+
+  .title {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+  }
+
+  .content {
+    background-color: var(--secondary-background-color);
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: var(--primary-text-color);
+  }
+
+  .btn_box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+
+    button {
+      padding: 15px;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      background-color: var(--primary-color);
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+}
