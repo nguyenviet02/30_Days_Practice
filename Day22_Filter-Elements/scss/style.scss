@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+}
+
+.food_container {
+  width: 1200px;
+  background-color: #e2f3e2;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.food_types {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+  button {
+    margin: 0 20px;
+    padding: 10px 30px;
+    border: 1px solid #0f9d58;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #0f9d58;
+    font-weight: 700;
+
+    &.active {
+      background-color: #0f9d58;
+      color: #fff;
+    }
+  }
+}
+
+.food_images {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.food_image {
+  width: 20%;
+  height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
