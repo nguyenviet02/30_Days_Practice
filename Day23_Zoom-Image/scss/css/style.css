@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+}
+
+.zoomer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.images_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 20px;
+}
+
+.image_item {
+  width: 500px;
+  height: 350px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.image_item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.result {
+  pointer-events: none;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid red;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 150px;
+  height: 150px;
+  background-image: url("https://images.unsplash.com/photo-1645069258059-6f5a71256c4a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI4fDZzTVZqVExTa2VRfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+}
+.result.hide {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/*# sourceMappingURL=style.css.map */
