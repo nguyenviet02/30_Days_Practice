@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  background-color: #111111;
+}
+
+$rows: 10;
+$cols: 20;
+
+.square_container {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  grid-template-rows: repeat($rows, 1fr);
+  grid-gap: 7px;
+}
+
+.square {
+  width: 35px;
+  height: 35px;
+  background-color: #1d1d1d;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: ease 0.3s;
+}
