@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Player</title>
+<link rel="icon" href="">
+<meta name="title" content="">
+<meta name="description" content="">
+<meta property="og:locale" content="vi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Trang chủ">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:site_name" content="">
+<meta property="og:image" content="">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link rel="stylesheet" href="./scss/css/style.css">
+<script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="video-container">
+        <video src="./videos/kny.mkv" id="video"></video>
+        <div class="controls">
+            <div class="btn_Play-Toggle">
+                <i class="fas fa-pause hide"></i>
+                <i class="fas fa-play"></i>
+            </div>
+            <div class="progress-container">
+                <div class="progress-time">
+                    <span class="current-time">00:00</span>
+                    /
+                    <span class="duration">00:00</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+            <div class="seek_container">
+                <span class="seek-backward">
+                    <<10s 
+                </span>
+                <span class="seek-forward">
+                    10s>>
+                </span>
+            </div>
+            <div class="volume-container">
+                <i class="fas fa-volume-up"></i>
+                <div class="volume">
+                    <div class="volume-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
