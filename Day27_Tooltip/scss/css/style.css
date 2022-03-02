@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  background-color: #dadada;
+}
+
+.media_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.media_container .media_item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 20px;
+}
+.media_container .media_item i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100rem;
+  background-color: #fff;
+  font-size: 23px;
+  transition: 0.3s;
+}
+.media_container .media_item .tooltip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.media_container .media_item .tooltip::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: inherit;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.media_container .media_item.active .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-200%);
+}
+.media_container .media_item.active i {
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
