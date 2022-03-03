@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paint</title>
+<link rel="icon" href="">
+<meta name="title" content="">
+<meta name="description" content="">
+<meta property="og:locale" content="vi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Trang chủ">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:site_name" content="">
+<meta property="og:image" content="">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="./scss/css/style.css">
+<script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="tools_bar">
+        <div class="settings">
+            <div class="color_box box">
+                <input type="color" name="color" id="color_bar">
+            </div>
+            <div class="eraser_box box">
+                <i class="fas fa-eraser"></i>
+            </div>
+            <div class="decrease_size_box box">
+                <i class="fas fa-minus"></i>
+            </div>
+            <div class="size_box box">10</div>
+            <div class="increase_size_box box">
+                <i class="fas fa-plus"></i>
+            </div>
+        </div>
+        <div class="func_box">
+            <a download="example.png" class="save_box box">
+                <i class="fas fa-save"></i>
+            </a>
+            <div class="clear_box box">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
+    <div class="canvas_box">
+        <canvas id="canvas" width="1000" height="600" style="border:1px solid #000; margin-top: 60px;"></canvas>
+    </div>
+</body>
+
+</html>

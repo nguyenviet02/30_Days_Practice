@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins";
+}
+
+.tools_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: #4f44eb;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.tools_bar .settings,
+.tools_bar .func_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tools_bar .box {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: black;
+}
+
+#color {
+  width: 70%;
+  border: none;
+  outline: none;
+}
+
+/*# sourceMappingURL=style.css.map */
