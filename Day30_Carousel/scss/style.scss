@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  background-image: linear-gradient(145deg, #413579, #632a4c);
+}
+
+.container {
+  border: 2px solid #fff;
+  padding: 15px 25px 5px 25px;
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap;
+  gap: 15px;
+  overflow-x: auto;
+
+  .box {
+    display: inline-block;
+    min-width: 100px;
+    height: 100px;
+    background-color: rgb(170, 16, 75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    font-size: 20px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+}
