@@ -30,19 +30,19 @@ function addTodo(todo) {
     li.setAttribute("class", "completed");
   }
   li.addEventListener('click', function () {
-		this.classList.toggle('completed');
-		saveTodo();
-	})
+    this.classList.toggle('completed');
+    saveTodo();
+  })
 
-	li.querySelector('i').addEventListener('click', (e) => {
-		e.target.parentElement.remove();
-		saveTodo();
-	})
+  li.querySelector('i').addEventListener('click', (e) => {
+    e.target.parentElement.remove();
+    saveTodo();
+  })
   todo_list.appendChild(li);
   saveTodo();
 }
 
-function saveTodo(){
+function saveTodo() {
   let todos = todo_list.querySelectorAll("li");
   let todoList = [];
   todos.forEach((todo) => {
@@ -57,8 +57,8 @@ function saveTodo(){
 }
 
 
-function init(){
-  let data = JSON.parse(localStorage.getItem("todo_list"));
+function init() {
+  let data = JSON.parse(localStorage.getItem("todo_list")) || [];
   data.forEach(item => {
     addTodo(item);
   });
