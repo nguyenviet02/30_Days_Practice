@@ -243,17 +243,56 @@ const app = {
 
 
   handleEvent() {
-    //* Hiệu ứng khi hover vào project
+    //* Variables
+    const mouse = document.querySelector('.mouse');
+    const cursor = document.querySelector('.cursor');
     const projects = document.querySelectorAll('.project');
+    const live_demos = document.querySelectorAll('.live-demo');
+    const view_codes = document.querySelectorAll('.view-code');
+
+    //* Hiệu ứng khi hover vào project
     projects.forEach(project => {
       project.onmouseover = function () {
         project.querySelector(".project-action").classList.remove('hide');
+        cursor.classList.add('active');
       };
       project.onmouseleave = function () {
         project.querySelector(".project-action").classList.add('hide');
+        cursor.classList.remove('active');
       };
     })
 
+    //* Hiệu ứng khi hover vào live-demo và view-code
+    live_demos.forEach(live_demo => {
+      live_demo.onmouseover = function () {
+        mouse.classList.add('active');
+      };
+      live_demo.onmouseleave = function () {
+        mouse.classList.remove('active');
+      };
+    });
+    view_codes.forEach(view_code => {
+      view_code.onmouseover = function () {
+        mouse.classList.add('active');
+      };
+      view_code.onmouseleave = function () {
+        mouse.classList.remove('active');
+      };
+    });
+
+    //* Hiệu ứng con trỏ chuột
+    document.onmousemove = function (e) {
+      gsap.to(cursor, {
+        x: e.pageX - cursor.offsetWidth / 2,
+        y: e.pageY - cursor.offsetHeight / 2,
+        duration: 0.2,
+      })
+      gsap.to(mouse, {
+        x: e.pageX - mouse.offsetWidth / 2,
+        y: e.pageY - mouse.offsetHeight / 2,
+        duration: 0.3,
+      })
+    }
   },
 
   init() {

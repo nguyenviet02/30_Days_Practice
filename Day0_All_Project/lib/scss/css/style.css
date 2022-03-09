@@ -8,10 +8,46 @@ body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
   background-color: #0f172a;
+  overflow-x: hidden;
+  cursor: none;
 }
 
 a {
   text-decoration: none;
+}
+
+.cursor {
+  position: absolute;
+  z-index: 2;
+  width: 6px;
+  height: 6px;
+  border-radius: 100rem;
+  background-color: #fff;
+  pointer-events: none;
+  animation-duration: 0.2s;
+  transition: width 0.2s, height 0.2s;
+}
+.cursor.active {
+  background-color: red;
+}
+
+.mouse {
+  position: absolute;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  border-radius: 100rem;
+  border: 2px solid #fff;
+  background-color: transparent;
+  pointer-events: none;
+  transition: width 0.2s, height 0.2s, border 0.2s;
+  mix-blend-mode: difference;
+}
+.mouse.active {
+  width: 80px;
+  height: 80px;
+  border: 4px solid red;
+  background-color: #fff;
 }
 
 .header {
@@ -132,6 +168,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  cursor: none;
 }
 .projects-container .project-action button {
   width: 80%;
@@ -145,7 +182,7 @@ a {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   background-image: linear-gradient(to right top, #6a5af9, #cb3cff);
   color: #fff;
-  cursor: pointer;
+  cursor: none;
 }
 .projects-container .project-action button:hover {
   background-image: linear-gradient(to right top, #a84242, #a73cff);
@@ -165,6 +202,20 @@ a {
   .projects-container {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .cursor {
+    display: none;
+  }
+  .cursor.active {
+    display: none;
+  }
+
+  .mouse {
+    display: none;
+  }
+  .mouse.active {
+    display: none;
+  }
 }
 @media screen and (min-width: 669px) and (max-width: 899px) {
   .header-title {
@@ -174,6 +225,20 @@ a {
   .projects-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .cursor {
+    display: none;
+  }
+  .cursor.active {
+    display: none;
+  }
+
+  .mouse {
+    display: none;
+  }
+  .mouse.active {
+    display: none;
+  }
 }
 @media screen and (min-width: 900px) and (max-width: 1200px) {
   .header-title {
@@ -182,6 +247,14 @@ a {
 
   .projects-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cursor {
+    display: none;
+  }
+
+  .mouse {
+    display: none;
   }
 }
 
