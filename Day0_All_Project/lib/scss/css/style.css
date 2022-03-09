@@ -36,6 +36,29 @@ a {
 .header-title {
   font-size: 50px;
   color: #fff;
+  text-shadow: 0 0 20px #ff005b;
+  position: relative;
+}
+.header-title:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: #ff005b;
+  filter: blur(15px);
+}
+.header-title:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-color: #ff005b;
+  opacity: 0.5;
+  filter: blur(40px);
 }
 
 .projects-container {
